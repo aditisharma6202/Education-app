@@ -1,0 +1,60 @@
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+
+}
+.only-mobile-flex{
+    display: flex;
+}
+.only-desktop-flex{
+    display: none;
+}
+.btn-bold{
+    font-size: 2rem;
+}
+.desktop-link-btn{
+    font: 800;
+    font-size: 1rem;
+}
+.navlinks{
+    position: absolute;
+    top: 73px;;
+    height:100vh;
+   width: 100vw;
+    background-color: white;
+
+}
+.nav-link{
+font-size: 1.2rem;
+text-transform: capitalize;
+color: black;
+}
+.nav-link:hover{
+    background-color: var(--bs-indigo);
+    color: white;
+}
+.desktop-link{
+    color:black;
+    font: 500;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.desktop-link:hover{
+    color:var(--mdb-orange)
+}
+.bi-heart,.bi-cart3,.bi-bell {
+    font-size: 1.5rem;
+}
+.fontptserif{
+    font-family: serif;
+}
+@media (min-width:60em) {
+    .only-desktop-flex{
+        display: flex;
+    }
+    .only-mobile-flex{
+        display: none;
+    }
+}

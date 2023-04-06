@@ -1,0 +1,16 @@
+.bg-pink{
+    background-color: var(--bs-blue-color);
+}
+.my-learning{
+    padding-top: 14rem;
+    min-height: 40vh;
+    background-color: black;
+    color: white;
+
+}
+@media (min-width:60em) {
+    .my-learning
+    {
+   padding-left: 15rem;
+    }
+}

@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Courses from './courses/courses';
+import "@blueprintjs/table/lib/css/table.css";
 
+
+import { BrowserRouter , Route, Routes } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import Courses from './courses/courses';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    
- 
-  </React.StrictMode>
+  <BrowserRouter>
+     {/* <ScrollIntoView> */}
+      
+        <Routes>
+         <Route path='/' element={<Courses/>}/>
+
+        </Routes>
+      
+    {/* </ScrollIntoView> */}
+    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
