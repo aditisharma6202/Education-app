@@ -33,9 +33,7 @@ code {
 .btn{
 box-shadow: none !important;
 }
-.btn-orange{
-color: var(--mdb-orange);
-}
+
 .color-orange{
   color: var(--mdb-orange);
 }
@@ -47,12 +45,7 @@ color: var(--mdb-orange);
 .border-below{
 border-bottom: 1px solid rgb(161, 161, 161);
 }
-.footer{
-  position: absolute;
-  bottom: 0;
-  right:0;
-  left:0;
-}
+
 .footer-link{
   padding-top: 0.6rem;
 }

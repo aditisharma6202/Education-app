@@ -35,7 +35,7 @@ function Header() {
         console.log(toggle)
     }
     return ( <>
-     <div className='header bg-light py-1'>
+     <div className='header py-1'>
 
         <div className='justify-content-between align-items-center px-3 only-desktop-flex'>
             <div className='col-1'>LOGO</div>
@@ -52,9 +52,9 @@ function Header() {
             <Link  to='' className='col desktop-link'>Team</Link>
             {/* <Link to='' className='col desktop-link'>CONTACT</Link> */}
           <div className='col'>
-          <Link className='desktop-link px-2'><i class="bi bi-heart btn-orange"></i></Link>
-            <Link className=' desktop-link px-2'><i class="bi bi-cart3 btn-orange"></i></Link>
-            <Link className='desktop-link px-2'><i class="bi bi-bell btn-orange"></i></Link>
+          <Link className='desktop-link px-2'><i class="bi bi-heart color-orange"></i></Link>
+            <Link className=' desktop-link px-2'><i class="bi bi-cart3 color-orange"></i></Link>
+            <Link className='desktop-link px-2'><i class="bi bi-bell color-orange"></i></Link>
           </div>
            
             <Link className='col desktop-link px-2'><img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" 
