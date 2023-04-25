@@ -2,15 +2,25 @@
     background-color: var(--bs-blue-color);
 }
 .my-learning{
-    padding-top: 14rem;
+    padding-top: 9rem;
     min-height: 40vh;
     background-color: black;
     color: white;
+    font-weight: 800;
+    font-size: 3rem;
 
+}
+.padding-15{
+    padding-left:1rem;
+    padding-right: 1rem;
 }
 @media (min-width:60em) {
     .my-learning
     {
    padding-left: 15rem;
+    }
+    .padding-15{
+        padding-left:13rem;
+        padding-right: 13rem;
     }
 }

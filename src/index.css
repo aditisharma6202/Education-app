@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif, 'PT Serif', serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Poppins', sans-serif;
 overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,6 +13,9 @@ code {
     monospace;
 }
 
+.font-serif{
+  font-family: 'Playfair Display', serif;
+}
 .card-title{
   color: var(--bs-success-text-emphasis);
 }
@@ -30,10 +34,16 @@ code {
   --bs-yellow-color: #fcf6bd;
   --bs-green-color:#d0f4de;
 }
+.bg-home{
+  background-color: #e4c1f977;
+}
 .btn{
 box-shadow: none !important;
 }
-
+.bg-light-purple{
+  background-color: var(--bs-purple-color);
+}
+.bg-li
 .color-orange{
   color: var(--mdb-orange);
 }
@@ -56,4 +66,28 @@ color:var(--mdb-orange) !important
   background-color: black;
   border:2px solid white;
   font-size: 1.25rem;
+}
+.head-margin{
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+.bg-cream{
+  background: #f8f8f8;
+  width: 100vw;
+}
+.bg-light-white{
+  background: #f8f8f8;
+}
+.extra-shadow{
+  box-shadow: 0 2px 4px rgba(0,0,0,.08),0 4px 12px rgba(0,0,0,.08) !important;
+}
+.font-small{
+  font-size: 12px;
+
+}
+@media (min-width:60em) {
+  .head-margin{
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+  } 
 }

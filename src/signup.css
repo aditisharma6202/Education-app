@@ -1,0 +1,10 @@
+.main {
+    background: #f8f8f8;
+    padding: 150px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .small-text{
+    font-size: 10px;
+  }
