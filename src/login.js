@@ -1,28 +1,42 @@
 import React ,{useState}from 'react';
 import signup from'./images/signup.jpg'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from "react-toastify";
 import axios from 'axios';
 function Login() {
     const [email, setEmail] = useState("");
 
     const [password, setPassword] = useState("");
+    const navigate = useNavigate();
     const handleClick=()=>{   
         try {
             console.log(email,password)
-            axios.post('http://skill.eviternship.com/studentLogin',{
+            axios.post('https://skill.eviternship.com/studentLogin',{
                 email:email ,
                  password: password
             })
-               .then(function (response) {
-                 console.log(response);
+               .then(function (Response) {
+                 console.log(Response);
+                 if(Response.status==200){
+                    localStorage.setItem('token',Response.data.token);
+            console.log(  localStorage.getItem('token'))       
+                    navigate('/home');
+
+                 }
          
                })
-               .catch(function (error) {
-                 console.log(error);
+               .catch(function () {
+
+                 toast.error("User does not exist")
+                 setTimeout(()=>{
+                    window.location.reload()
+                 },[1000])
                });
         } catch (error) {
             toast.error("Something went wrong") 
+            setTimeout(()=>{
+                window.location.reload()
+             },[1000])
         }    
     
     }

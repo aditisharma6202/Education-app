@@ -5,24 +5,24 @@ import { Link } from 'react-router-dom';
 
 const Navlinks=()=>{
     
-return(<div className='navlinks  py-2'>
-    <div className='col-12'>
-        <div className='nav-link px-4 py-4 d-flex justify-content-between'>
+return(<div className='navlinks  py-2 overflow-x'>
+    <div className='col-12 overflow-x'>
+        <Link to={'/home'} className='nav-link px-4 py-4 d-flex justify-content-between'>
             <div>Dashboard</div>
             <div><i class="bi bi-grid-1x2-fill color-orange"></i></div>
-        </div>
-        <div className=' nav-link py-4  px-4 d-flex justify-content-between'>
+        </Link>
+        <Link to={'/home'} className=' nav-link py-4  px-4 d-flex justify-content-between'>
             <div>HOME</div>
             <div><i class="bi bi-house-fill color-orange"></i></div>
-        </div>
-        <div className=' nav-link py-4 px-4 d-flex justify-content-between'>
+        </Link>
+        <Link to={'/createcourse'} className=' nav-link py-4 px-4 d-flex justify-content-between'>
             <div >COURSES</div>
             <div><i class="bi bi-book-fill color-orange"></i></div>
-        </div>
-        <div className='nav-link py-4 px-4 d-flex justify-content-between'>
+        </Link>
+        <Link to={'/course'} className='nav-link py-4 px-4 d-flex justify-content-between'>
             <div >ABOUT</div>
             <div ><i class="bi bi-card-text color-orange"></i></div>
-        </div>
+        </Link>
         <div className='nav-link px-4 py-4 d-flex justify-content-between'>
             <div>TEAM</div>
             <div ><i class="bi bi-microsoft-teams color-orange"></i></div>
@@ -38,9 +38,9 @@ function Header() {
         console.log(toggle)
     }
     return ( <>
-     <div className='header py-1'>
+     <div className='header py-1 overflow-x'>
 
-        <div className='justify-content-between align-items-center px-3 only-desktop-flex'>
+        <div className='justify-content-between align-items-center px-3 only-desktop-flex overflow-x'>
             <div className='col-1'>LOGO</div>
             <div className='col-3'>
                 <input className='search form-control rounded-pill py-3'  placeholder='search'/>
@@ -49,7 +49,7 @@ function Header() {
             </div>
             <div className='col-6'>
                 <div className='d-flex align-items-center gap-4'>
-                <Link to='' className='desktop-link'>Home</Link>
+                <Link to='/home' className='desktop-link'>Home</Link>
             <Link to='/course' className=' desktop-link'>Courses</Link>
             <Link to='' className=' desktop-link'>About</Link>
            
@@ -100,7 +100,7 @@ function Header() {
         </div>
        
     </div>
-    <div className='only-mobile-flex'>
+    <div className='only-mobile-flex overflow-x'>
     {toggle && <Navlinks/>}
     </div>
    

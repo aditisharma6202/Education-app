@@ -12,7 +12,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+.overfow-x{
+  overflow-x: hidden!important;
+}
 .font-serif{
   font-family: 'Playfair Display', serif;
 }
@@ -37,11 +39,12 @@ code {
 .bg-home{
   background-color: #e4c1f977;
 }
+
 .btn{
 box-shadow: none !important;
 }
 .bg-light-purple{
-  background-color: var(--bs-purple-color);
+  background-color: #edc9f9ac;
 }
 .bg-li
 .color-orange{
@@ -68,7 +71,7 @@ color:var(--mdb-orange) !important
   font-size: 1.25rem;
 }
 .head-margin{
-  margin-top: 10rem;
+  margin-top: 5.8rem;
   margin-bottom: 2rem;
 }
 .bg-cream{
@@ -85,9 +88,17 @@ color:var(--mdb-orange) !important
   font-size: 12px;
 
 }
+.bi-star-fill{
+  color:yellow
+}
+.description{
+  text-overflow: ellipsis; 
+overflow: hidden; 
+white-space: nowrap;
+}
 @media (min-width:60em) {
   .head-margin{
-    margin-top: 9rem;
+    margin-top: 5.5rem;
     margin-bottom: 2rem;
   } 
 }
