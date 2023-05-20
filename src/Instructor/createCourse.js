@@ -23,31 +23,24 @@ function CreateCourses() {
     setBaseImage(event.target.files[0])
     console.log(baseImage)
   }
-const   handleClick=(e)=>{  
+const   handleClick= async(e)=>{  
 
-  // const formData = new FormData();
-  // formData.append('course_name', name);
-  // formData.append('description', description);
-  // formData.append('image', baseImage);
-  // formData.append('language', language);
-  // formData.append('price', price);
-  // formData.append('rating', '5');
-  // formData.append('requirement', requirement);
+  const formData = new FormData();
+  formData.append('course_name', name);
+  formData.append('description', description);
+  formData.append('image', baseImage);
+  formData.append('language', language);
+  formData.append('price', price);
+  formData.append('rating', '5');
+  formData.append('requirement', requirement);
 
   console.log('clicked')
-   axios.post({
-    method: "post",
-    url: "http://skill.eviternship.com/addCourse",
-    data:{
-      course_name: name,
-      description: description,
-      image: baseImage,
-      language:language,
-      price:price,
-      rating:'5',
-      requirement:requirement
-    },
-    headers: {'Content-Type': 'multipart/form-data',
+
+  await axios.post(
+   
+     "https://skill.eviternship.com/addCourse",
+  formData ,
+    {headers: {'Content-Type': 'multipart/form-data',
     "Authorization": `Bearer ${localStorage.getItem('token')}`},
    
   })
