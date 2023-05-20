@@ -16,42 +16,50 @@ function CreateCourses() {
   const [price , setPrice]=useState('');
 
   const [baseImage, setBaseImage] = useState('');
-  const navigate = useNavigate();
+
   const token= localStorage.getItem('token')
-  console.log(token)
+
   const handleFileSelect = (event) => {
     setBaseImage(event.target.files[0])
     console.log(baseImage)
   }
-  const handleClick=()=>{   
+const   handleClick=(e)=>{  
 
-  
+  // const formData = new FormData();
+  // formData.append('course_name', name);
+  // formData.append('description', description);
+  // formData.append('image', baseImage);
+  // formData.append('language', language);
+  // formData.append('price', price);
+  // formData.append('rating', '5');
+  // formData.append('requirement', requirement);
 
-   axios({
+  console.log('clicked')
+   axios.post({
     method: "post",
-    url: "https://skill.eviternship.com/addCourse",
-    data: {'course_name':name,
-         'description':description,
-          'image':baseImage,
-          'language':language,
-          'price':price,
-          'rating':'5',
-          'requirement':requirement},
-
+    url: "http://skill.eviternship.com/addCourse",
+    data:{
+      course_name: name,
+      description: description,
+      image: baseImage,
+      language:language,
+      price:price,
+      rating:'5',
+      requirement:requirement
+    },
     headers: {'Content-Type': 'multipart/form-data',
     "Authorization": `Bearer ${localStorage.getItem('token')}`},
-  
    
   })
   .then((response) => {
     console.log(response)
-  })
-  .catch(function (error) {
     
+  })
+  .catch(function (error) {  
     console.log(error);
 });
-    
-    
+console.log('after Axios')
+
 }
   return (
     <div className="bg-cream">
@@ -63,7 +71,7 @@ function CreateCourses() {
             <div className="card-body">
               <h2 className="topic text-center">Create Course</h2>
               <div className="fw-bold">It's ok if you can't think of a good title now. You can change it later.</div>
-              <form>
+              <form onSubmit={handleClick}>
                 <div className="row align-items-center justify-content-center overflow-x">
                   <div className=" col-md-8 col-12 mt-5  ">
                     <label>Course Name</label>
@@ -121,8 +129,10 @@ function CreateCourses() {
                     </div>
                   </div>
                 </div>
-                <button  onClick={handleClick} className="btn btn-primary mt-5">Create Curriculum</button>
+                
               </form>
+              <button  onClick={
+                  handleClick} className="btn btn-primary mt-5">Create Curriculum</button>
               
             </div>
           </div>
